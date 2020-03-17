@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "674535230520",
+    "firebase_url": "https://chatapp-83238.firebaseio.com",
+    "project_id": "chatapp-83238",
+    "storage_bucket": "chatapp-83238.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674535230520:android:1adccf91e6626eb0ab6acd",
+        "android_client_info": {
+          "package_name": "co.alabhya.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674535230520-7u3v361eg0ifta0ce6887nfq0rvkmm1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8q2-samHi8L0ZWflRhZ-p1O_6SrpSoIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674535230520-7u3v361eg0ifta0ce6887nfq0rvkmm1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
