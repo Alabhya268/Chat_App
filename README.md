@@ -11,7 +11,7 @@ Modern group messaging app where users can sign up and log in to chat.
 - Firebase into your Flutter projects.
 - Firebase authentication to register and sign in users.
 - Create beautiful animations using the Flutter Hero widget.
-- create custom aniamtions using Flutter's animation controller. 
+- create custom animations using Flutter's animation controller. 
 - Used Streams.
 - Used ListViews to build scrolling views.
 - Firebase Cloud Firestore to store and retrieve data on the fly.
