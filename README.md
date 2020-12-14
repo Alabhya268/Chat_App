@@ -1,3 +1,11 @@
+# How to run
+1 - Install from here- https://flutter.dev/docs/get-started/install
+2 - Add path_to_flutter_sdk/[flutter/bin] to environment variable
+3 - Connect an android device to pc.
+4 - Turn on USB debugging mode [https://developer.android.com/studio/debug/dev-options]
+5 - clone repo
+6 - Navigate to path_to_repo[Chat_App]
+7 - Run cmd - flutter run
 
 # Flash Chat ⚡️
  Used Firebase Cloud Firestore as well as the Firebase authentication package to equip our app with a cloud-based NoSQL database and secure authentication methods. 
