@@ -6,7 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'chat_screen.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
-
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
   @override
@@ -16,8 +15,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
   bool showspinner = false;
-   String email;
-   String password;
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(
               child: Column(
                 children: <Widget>[
-                  pagedecorationcontainer(title: 'Login',),
+                  pagedecorationcontainer(
+                    title: 'Login',
+                  ),
                   Padding(
                     padding: EdgeInsets.all(30.0),
                     child: Column(
@@ -42,7 +43,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: Color.fromRGBO(143, 148, 251, .2),
+                                        color:
+                                            Color.fromRGBO(143, 148, 251, .2),
                                         blurRadius: 20.0,
                                         offset: Offset(0, 10))
                                   ]),
@@ -55,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                             bottom: BorderSide(
                                                 color: Colors.grey[100]))),
                                     child: TextField(
-                                      onChanged: (value){
+                                      onChanged: (value) {
                                         email = value;
                                       },
                                       keyboardType: TextInputType.emailAddress,
@@ -63,14 +65,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Email or Phone number",
-                                          hintStyle:
-                                          TextStyle(color: Colors.grey[400])),
+                                          hintStyle: TextStyle(
+                                              color: Colors.grey[400])),
                                     ),
                                   ),
                                   Container(
                                     padding: EdgeInsets.all(8.0),
                                     child: TextField(
-                                      onChanged: (value){
+                                      onChanged: (value) {
                                         password = value;
                                       },
                                       obscureText: true,
@@ -78,8 +80,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Password",
-                                          hintStyle:
-                                          TextStyle(color: Colors.grey[400])),
+                                          hintStyle: TextStyle(
+                                              color: Colors.grey[400])),
                                     ),
                                   )
                                 ],
@@ -90,22 +92,21 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         fadeanimationbutton(
                           title: 'Login',
-                          function: () async{
+                          function: () async {
                             setState(() {
                               showspinner = true;
                             });
-                            try{
-                              final user =await _auth.signInWithEmailAndPassword(email: email, password: password);
-                              if(user != null)
-                              {
+                            try {
+                              final user =
+                                  await _auth.signInWithEmailAndPassword(
+                                      email: email, password: password);
+                              if (user != null) {
                                 Navigator.pushNamed(context, ChatScreen.id);
                               }
                               setState(() {
                                 showspinner = false;
                               });
-                            }
-                            catch(e)
-                            {
+                            } catch (e) {
                               print(e);
                             }
                           },
@@ -130,4 +131,3 @@ class _LoginScreenState extends State<LoginScreen> {
         ));
   }
 }
-

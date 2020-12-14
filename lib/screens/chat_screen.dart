@@ -56,8 +56,8 @@ class _ChatScreenState extends State<ChatScreen> {
             IconButton(
                 icon: Icon(Icons.close),
                 onPressed: () {
-               _auth.signOut();
-               Navigator.pop(context);
+                  _auth.signOut();
+                  Navigator.pop(context);
                   //Implement logout functionality
                 }),
           ],
@@ -159,7 +159,7 @@ class MessagesStream extends StatelessWidget {
         }
         return Expanded(
             child: ListView(
-              reverse: true,
+          reverse: true,
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           children: messageBubbles,
         ));
@@ -178,22 +178,25 @@ class MessageBubble extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(10.0),
       child: Column(
-        crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+        crossAxisAlignment:
+            isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             sender,
             style: TextStyle(fontSize: 12, color: Colors.black54),
           ),
           Material(
-            borderRadius: isMe ? BorderRadius.only(
-                topLeft: Radius.circular(30),
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30)): BorderRadius.only(
-                topRight: Radius.circular(30),
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30)),
+            borderRadius: isMe
+                ? BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30))
+                : BorderRadius.only(
+                    topRight: Radius.circular(30),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)),
             elevation: 5,
-            color:  isMe ? Colors.blueAccent : Colors.white,
+            color: isMe ? Colors.blueAccent : Colors.white,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Text(

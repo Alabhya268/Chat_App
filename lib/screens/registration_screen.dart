@@ -21,7 +21,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: ModalProgressHUD(inAsyncCall: showspinner,
+        body: ModalProgressHUD(
+          inAsyncCall: showspinner,
           child: SingleChildScrollView(
             child: Container(
               child: Column(
@@ -40,7 +41,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                        color: Color.fromRGBO(143, 148, 251, .2),
+                                        color:
+                                            Color.fromRGBO(143, 148, 251, .2),
                                         blurRadius: 20.0,
                                         offset: Offset(0, 10))
                                   ]),
@@ -61,8 +63,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Email or Phone number",
-                                          hintStyle:
-                                          TextStyle(color: Colors.grey[400])),
+                                          hintStyle: TextStyle(
+                                              color: Colors.grey[400])),
                                     ),
                                   ),
                                   Container(
@@ -76,8 +78,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                       decoration: InputDecoration(
                                           border: InputBorder.none,
                                           hintText: "Password",
-                                          hintStyle:
-                                          TextStyle(color: Colors.grey[400])),
+                                          hintStyle: TextStyle(
+                                              color: Colors.grey[400])),
                                     ),
                                   )
                                 ],
@@ -88,22 +90,21 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                         fadeanimationbutton(
                           title: 'Register',
-                          function: () async{
+                          function: () async {
                             setState(() {
                               showspinner = true;
                             });
-                            try{
-                              final newUser =await _auth.createUserWithEmailAndPassword(email: email, password: password);
-                              if(newUser != null)
-                              {
+                            try {
+                              final newUser =
+                                  await _auth.createUserWithEmailAndPassword(
+                                      email: email, password: password);
+                              if (newUser != null) {
                                 Navigator.pushNamed(context, ChatScreen.id);
                               }
                               setState(() {
                                 showspinner = false;
                               });
-                            }
-                            catch(e)
-                            {
+                            } catch (e) {
                               print(e);
                             }
                           },
@@ -121,6 +122,3 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ));
   }
 }
-
-
-

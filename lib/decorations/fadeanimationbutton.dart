@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import '../Animation/FadeAnimation.dart';
 
 class fadeanimationbutton extends StatelessWidget {
-  fadeanimationbutton({@required this.title
-    ,@required this.function
-  }) ;
+  fadeanimationbutton({@required this.title, @required this.function});
   final String title;
   final Function function;
 
@@ -32,8 +30,8 @@ class fadeanimationbutton extends StatelessWidget {
             height: 42.0,
             child: Text(
               title,
-              style: TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
         ),

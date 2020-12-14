@@ -14,8 +14,7 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen>
-{
+class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,21 +43,26 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 48.0,
             ),
-            fadeanimationbutton(title: 'Login', function: () {
-              Navigator.pushNamed(context, LoginScreen.id);
-              //Go to registration screen.
-            },),
+            fadeanimationbutton(
+              title: 'Login',
+              function: () {
+                Navigator.pushNamed(context, LoginScreen.id);
+                //Go to registration screen.
+              },
+            ),
             SizedBox(
               height: 10,
             ),
-            fadeanimationbutton(title: 'Register',function: () {
-              Navigator.pushNamed(context, RegistrationScreen.id);
-              //Go to registration screen.
-            },),
+            fadeanimationbutton(
+              title: 'Register',
+              function: () {
+                Navigator.pushNamed(context, RegistrationScreen.id);
+                //Go to registration screen.
+              },
+            ),
           ],
         ),
       ),
     );
   }
 }
-

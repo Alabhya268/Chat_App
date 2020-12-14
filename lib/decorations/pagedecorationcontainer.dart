@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import '../Animation/FadeAnimation.dart';
 
 class pagedecorationcontainer extends StatelessWidget {
-  const pagedecorationcontainer({@required this.title
-  });
+  const pagedecorationcontainer({@required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -13,8 +12,7 @@ class pagedecorationcontainer extends StatelessWidget {
       height: 400,
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/background.png'),
-              fit: BoxFit.fill)),
+              image: AssetImage('images/background.png'), fit: BoxFit.fill)),
       child: Stack(
         children: <Widget>[
           Positioned(
